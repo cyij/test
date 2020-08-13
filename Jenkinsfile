@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('node-env-init') {
       steps {
-        sh 'ls -al'
+        sh 'docker pull postman/newman:4.5-alpine'
       }
     }
 
