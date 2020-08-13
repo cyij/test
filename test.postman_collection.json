@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "4334a48e-5c78-4302-a8d1-3dc4b7aba3a7",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c8e17710-2d55-40d0-b40e-3dce875f3367",
+						"exec": [
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.status).to.eql('-1');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://auth.supaide.cn/api/login/login?__cmsuid=-1&email=chenyijun&passwd=123456",
+					"protocol": "http",
+					"host": [
+						"auth",
+						"supaide",
+						"cn"
+					],
+					"path": [
+						"api",
+						"login",
+						"login"
+					],
+					"query": [
+						{
+							"key": "__cmsuid",
+							"value": "-1"
+						},
+						{
+							"key": "email",
+							"value": "chenyijun"
+						},
+						{
+							"key": "passwd",
+							"value": "123456"
+						}
+					]
+				},
+				"description": "login"
+			},
+			"response": []
+		}
+	]
+}
