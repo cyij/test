@@ -1,9 +1,14 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'nodetest'
+    }
+
+  }
   stages {
     stage('node-env-init') {
       steps {
-        sh 'ls -al'
+        sh 'npm  -v'
       }
     }
 
